@@ -11,6 +11,7 @@ var gameEnd = false;
 // FUNCTIONS
 // ===================================================
 // Function to reset game
+// function resetGame () {
     // Randomly generate target number between 19-120
     var targetNumber = Math.floor((Math.random() * 120) + 19);
     console.log(targetNumber);
@@ -18,7 +19,7 @@ var gameEnd = false;
     // Push target number to dom using jquery
     $('#number-to-guess').append(targetNumber);
 
-    // Randomly generate 4 numbers from 1-12 and and assign that value to a gem
+    // Randomly generate 4 numbers from 1-12 and assign that value to a gem
     var numberOption1 = Math.floor((Math.random() * 12) + 1);
     console.log(numberOption1);
     // Push number to dom
@@ -39,22 +40,35 @@ var gameEnd = false;
     // Push number to dom
     $('#crystal-4').append(numberOption4);
 
-    // Reset total score
-
+// }
+    
 // Function to click and add value to total score
-function adder() {
+// function adder() {
+    // When user clicks on a gem, add its value to the total score, and for each subsequent gem click, add that value on to total score
+    // Extract value of each gem
 
-}
+    // Add this value to the counter
+    $('#total-score').append(counter);
 
-// Function to check win - if total score matches random numnber value
-function checkWin () {
+// }
 
-}
+// Function to check win - if total score matches target number value
+// function checkWin () {
+    $('#total-wins').append(wins);
+    if (counter === targetNumber) {
+        alert("You win!");
+        wins++;
+      }
+// }
 
-// Function to check loss - if total score exceeds random number value
-function checkLoss () {
-
-}
+// Function to check loss - if total score exceeds target number value
+// function checkLoss () {
+    $('#total-losses').append(losses);
+    if (counter >= targetNumber) {
+        alert("You lose!!");
+        losses++;
+    }
+// }
 
 // MAIN GAME LOGIC
 // ===================================================
