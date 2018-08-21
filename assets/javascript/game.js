@@ -4,39 +4,37 @@ $(document).ready(function () {
 // ===================================================
 var wins = 0;
 var losses = 0;
-var score = 0;
 var counter = 0;
 var targetNumber;
-var gameEnd = false;
 
+$("#total-wins").append("Wins: " + wins); // Need to replace, not append
+$("#total-losses").append("Losses: " + losses); // Need to replace, not append
 
-// FUNCTIONS
+// MAIN
 // ===================================================
-// Function to reset game
-// function resetGame () {
+
     // Randomly generate target number between 19-120
     var targetNumber = Math.floor((Math.random() * 120) + 19);
-    console.log(targetNumber);
+    console.log("This is the target number: " + targetNumber);
 
     // Push target number to dom using jquery
-    $('#number-to-guess').append(targetNumber);
+    $("#number-to-guess").append(targetNumber);
 
     // Randomly generate a number from 1-12 and assign to variable
     var numberOption1 = Math.floor((Math.random() * 12) + 1);
-    console.log(numberOption1);
+    console.log("This is the crystal 1 value: " + numberOption1);
 
     var numberOption2 = Math.floor((Math.random() * 12) + 1);
-    console.log(numberOption2);
+    console.log("This is the crystal 2 value: " + numberOption2);
     
     var numberOption3 = Math.floor((Math.random() * 12) + 1);
-    console.log(numberOption3);
+    console.log("This is the crystal 3 value: " + numberOption3);
     
     var numberOption4 = Math.floor((Math.random() * 12) + 1);
-    console.log(numberOption4);
+    console.log("This is the crystal 4 value: " + numberOption4);
     
     // Store those four numbers in array
     var numberOptions = [numberOption1, numberOption2, numberOption3, numberOption4];
-    console.log(numberOptions);
 
     // Loop through array and create crystals for every number option
     for (var i = 0; i < numberOptions.length; i++) {
@@ -56,65 +54,42 @@ var gameEnd = false;
 
         // Add each crystalImage to html id
         $("#crystals").append(imageCrystal);
-        console.log(imageCrystal);
+        
     }
-
-// }
 
 // Click event will apply to all crystals
 $(".crystal-image").on("click", function() {
 
+    // Determining the crystal's value requires us to extract the value from the data attribute.
+    // Using the $(this) keyword specifies that we should be extracting the crystal value of the clicked crystal.
+    // Using the .attr("data-crystalvalue") allows us to grab the value out of the "data-crystalvalue" attribute.
+    // Since attributes on HTML elements are strings, we must convert it to an integer before adding to the counter
     var crystalValue = ($(this).attr("data-crystalvalue"));
     crystalValue = parseInt(crystalValue);
 
+    // We then add the crystalValue to the user's "counter" which is a global variable.
+    // Every click, from every crystal adds to the global counter.
     counter += crystalValue;
 
-    
-// Function to click and add value to total score
-// function adder() {
     // When user clicks on a gem, add its value to the total score, and for each subsequent gem click, add that value on to total score
     // Extract value of each gem
-    $('#total-score').append(counter);
+    $('#total-score').append(counter); // Need to replace, not append
 
-
-    // Add this value to the counter
-    // counter = numberOption1 + numberOption2
-
+    // Win/lose statements
     if (counter === targetNumber) {
-        alert("You win!");
+        wins++;
+        alert("You win!");      
     }
     else if (counter > targetNumber) {
+        losses++;
         alert("You lose!");
     }
 
+    // Reset game function
+    function resetGame () {
+
+    }
+    
 })
 
 });
-    
-// }
-
-// Function to check win - if total score matches target number value
-// function checkWin () {
-    // $('#total-wins').append(wins);
-    // if (counter === targetNumber) {
-    //     alert("You win!");
-    //     wins++;
-    //   }
-// }
-
-// Function to check loss - if total score exceeds target number value
-// function checkLoss () {
-    // $('#total-losses').append(losses);
-    // if (counter >= targetNumber) {
-    //     alert("You lose!!");
-    //     losses++;
-    // }
-// }
-
-// MAIN GAME LOGIC
-// ===================================================
-// Ensures dom loads before any javascript is executed
-
-
-
-// end dom ready function
