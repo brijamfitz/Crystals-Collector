@@ -20,15 +20,15 @@ header {
     margin: 20px;
 }
 
+p {
+    margin: 20px;
+    font-size: 20px;
+}
+
 .container {
     border: solid;
     background-color: black;
     opacity: .85;
-}
-
-p {
-    margin: 20px;
-    font-size: 20px;
 }
 
 #number-to-guess {
