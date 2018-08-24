@@ -33,13 +33,13 @@ function resetGame() {
     var numberOption4 = Math.floor((Math.random() * 12) + 1);
     console.log("This is the crystal 4 value: " + numberOption4);
 
-    $(".crystal-image-1").attr("src", "http://cdn.playbuzz.com/cdn/35910209-2844-45c0-b099-f4d82878d54f/00261fda-4062-4096-81fd-8cf96b9034e8.jpg");
+    $(".crystal-image-1").attr("src", "assets/images/crystal-1.jpg");
 
-    $(".crystal-image-2").attr("src", "http://cdn.playbuzz.com/cdn/35910209-2844-45c0-b099-f4d82878d54f/00261fda-4062-4096-81fd-8cf96b9034e8.jpg");
+    $(".crystal-image-2").attr("src", "assets/images/crystal-2.jpg");
 
-    $(".crystal-image-3").attr("src", "http://cdn.playbuzz.com/cdn/35910209-2844-45c0-b099-f4d82878d54f/00261fda-4062-4096-81fd-8cf96b9034e8.jpg");
+    $(".crystal-image-3").attr("src", "assets/images/crystal-3.jpg");
 
-    $(".crystal-image-4").attr("src", "http://cdn.playbuzz.com/cdn/35910209-2844-45c0-b099-f4d82878d54f/00261fda-4062-4096-81fd-8cf96b9034e8.jpg");
+    $(".crystal-image-4").attr("src", "assets/images/crystal-4.jpg");
 
     $(".crystal-image-1").attr("data-crystalvalue", numberOption1);
     $(".crystal-image-2").attr("data-crystalvalue", numberOption2);
@@ -124,13 +124,13 @@ function resetGame() {
     console.log("This is the crystal 4 value: " + numberOption4);
     
     // Give each imageCrystal an src link to image of crystal
-    $(".crystal-image-1").attr("src", "http://cdn.playbuzz.com/cdn/35910209-2844-45c0-b099-f4d82878d54f/00261fda-4062-4096-81fd-8cf96b9034e8.jpg");
+    $(".crystal-image-1").attr("src", "assets/images/crystal-1.jpg");
 
-    $(".crystal-image-2").attr("src", "http://cdn.playbuzz.com/cdn/35910209-2844-45c0-b099-f4d82878d54f/00261fda-4062-4096-81fd-8cf96b9034e8.jpg");
+    $(".crystal-image-2").attr("src", "assets/images/crystal-2.jpg");
 
-    $(".crystal-image-3").attr("src", "http://cdn.playbuzz.com/cdn/35910209-2844-45c0-b099-f4d82878d54f/00261fda-4062-4096-81fd-8cf96b9034e8.jpg");
+    $(".crystal-image-3").attr("src", "assets/images/crystal-3.jpg");
 
-    $(".crystal-image-4").attr("src", "http://cdn.playbuzz.com/cdn/35910209-2844-45c0-b099-f4d82878d54f/00261fda-4062-4096-81fd-8cf96b9034e8.jpg");
+    $(".crystal-image-4").attr("src", "assets/images/crystal-4.jpg");
 
     // Give each imageCrystal an attribute called data-crystalValue
     $(".crystal-image-1").attr("data-crystalvalue", numberOption1);
