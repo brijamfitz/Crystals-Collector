@@ -1,5 +1,60 @@
 body {
     background: url('../images/background.jpg');
-    color: white;
+    color: yellow;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+    margin: 40px;
+}
+
+h1 {
+    font-size: 54px;
+}
+
+h2 {
+    font-size: 36px;
+    margin: 10px;
+}
+
+header {
+    text-align: center;
+    margin: 20px;
+}
+
+.container {
+    border: solid;
+    background-color: black;
+    opacity: .85;
+}
+
+p {
+    margin: 20px;
+    font-size: 20px;
+}
+
+#number-to-guess {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: white;
+    font-size: 54px;
+}
+
+#wins-losses {
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-top: 5px;
+}
+
+#crystals {
+    text-align: center;
+}
+
+#score {
+    margin: 20px;
+    text-align: center;
+}
+
+#total-score {
+    height: 50px;
 }
