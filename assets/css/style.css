@@ -3,6 +3,11 @@
     height: 150px;
   }
 
+body {
+    background: url('../images/background.jpg');
+    color: white;
+}
+
 h1 {
   font-size: 24px;
   font-weight: bold;
