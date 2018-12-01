@@ -2,6 +2,8 @@
 
 Play here: [Crystals Collector](https://brijamfitz.github.io/Crystals-Collector/)
 
+![image](assets/images/screenshot-crystals.png)
+
 **Game functionality:**
 * You will be given a random number at the start of the game.
 * There are four crystals. By clicking on a crystal, you will add a specific amount of points to your total score.
@@ -22,4 +24,4 @@ Designed and maintained by Brian Fitzgerald
 
 Email: brianjfitzgerald@gmail.com
 
-&#169; 2018
+Copyright &#169; 2018
