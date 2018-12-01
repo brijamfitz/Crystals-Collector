@@ -24,4 +24,8 @@ Designed and maintained by Brian Fitzgerald
 
 Email: brianjfitzgerald@gmail.com
 
+<<<<<<< HEAD
 Copyright &#169; 2018
+=======
+&#169; 2018
+>>>>>>> 90b4f9bcdee9bf22582c6197fa3fff5a37838e2a
